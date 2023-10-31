@@ -26,16 +26,16 @@ public class Employee {
 		}
 	}
 
-	double bonus(){
-        double bonus=0;
-        if(this.workHours>40){
-            for(int i=40;i<this.workHours;i++){
-                bonus+=30;
-            }
-            return bonus;
-        }
-        return bonus;
-    }
+	double bonus() {
+		double bonus = 0;
+		if (this.workHours > 40) {
+			for (int i = 40; i < this.workHours; i++) {
+				bonus += 30;
+			}
+			return bonus;
+		}
+		return bonus;
+	}
 
 	double raiseSalary() {
 		double raiseSalary = 0;
@@ -56,18 +56,16 @@ public class Employee {
 	}
 
 	void info() {
-		System.out.println("Adı: "+this.name);
-		System.out.println("Maaşı: "+this.salary);
-		System.out.println("Çalışma Saati: "+this.workHours);
-		System.out.println("Başlangıç Yılı: "+this.hireYear);
-		System.out.println("Vergi: "+tax());
-		System.out.println("Bonus: "+bonus());
-		System.out.println("Maaş Artışı: "+raiseSalary());
-		System.out.println("Vergi ve bonuslarla birlikte maas: "+(this.salary+bonus()-tax()));
-		System.out.println("Toplam maaş: "+ (this.salary+raiseSalary()+bonus()-tax()));
-		
-		
-		
+		System.out.println("Adı: " + this.name);
+		System.out.println("Maaşı: " + this.salary);
+		System.out.println("Çalışma Saati: " + this.workHours);
+		System.out.println("Başlangıç Yılı: " + this.hireYear);
+		System.out.println("Vergi: " + tax());
+		System.out.println("Bonus: " + bonus());
+		System.out.println("Maaş Artışı: " + raiseSalary());
+		System.out.println("Vergi ve bonuslarla birlikte maas: " + (this.salary + bonus() - tax()));
+		System.out.println("Toplam maaş: " + (this.salary + raiseSalary() + bonus() - tax()));
+
 	}
 
 }
